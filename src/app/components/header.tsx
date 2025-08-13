@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex-1 max-w-2xl">
           <div className="flex">
             <div className="relative flex-1 ">
-              <Input
+              <Input    
                 type="text"
                 placeholder="Search"
                 className="h-10 w-[400px] pr-4 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0"

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 function Avatar({
   className,
-  ...props
+  ...props 
 }: React.ComponentProps<typeof AvatarPrimitive.Root>) {
   return (
     <AvatarPrimitive.Root
