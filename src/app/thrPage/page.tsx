@@ -18,7 +18,7 @@ const products = [
     price: 59.5,
     originalPrice: 79.5,
     rating: 4,
-    image: "/images/smartwatch.png",
+    image: "/images/iphone.png",
     category: "Camera",
   },
   {
@@ -27,7 +27,7 @@ const products = [
     price: 59.5,
     originalPrice: 79.5,
     rating: 4,
-    image: "/images/tablet.png",
+    image: "/images/image 22.png",
     category: "Camera",
   },
   {
@@ -35,7 +35,7 @@ const products = [
     name: "Samsung HERO6 4K Action Camera",
     price: 89.5,
     rating: 5,
-    image: "/images/pot.png",
+    image: "/images/mobile.png",
     category: "Camera",
   },
   {
@@ -44,7 +44,7 @@ const products = [
     price: 59.5,
     originalPrice: 79.5,
     rating: 4,
-    image: "/images/plant.png",
+    image: "/images/tablet.png",
     category: "Camera",
   },
   {
@@ -53,7 +53,7 @@ const products = [
     price: 59.5,
     originalPrice: 79.5,
     rating: 4,
-    image: "/images/mobile.png",
+    image: "/images/camera.png",
     category: "Camera",
   },
   {
@@ -61,7 +61,7 @@ const products = [
     name: "Samsung HERO6 4K Action Camera",
     price: 89.5,
     rating: 5,
-    image: "/images/mixer.png",
+    image: "/images/image 22.png",
     category: "Camera",
   },
   {
@@ -70,7 +70,7 @@ const products = [
     price: 59.5,
     originalPrice: 79.5,
     rating: 4,
-    image: "/images/kettle.png",
+    image: "/images/laptop small.png",
     category: "Camera",
   },
   {
@@ -79,7 +79,7 @@ const products = [
     price: 59.5,
     originalPrice: 79.5,
     rating: 4,
-    image: "/images/iphone.png",
+    image: "/images/smartwatch small.png",
     category: "Camera",
   },
   {
@@ -87,7 +87,7 @@ const products = [
     name: "Samsung HERO6 4K Action Camera",
     price: 89.5,
     rating: 5,
-    image: "/images/image 93.png",
+    image: "/images/iphone.png",
     category: "Camera",
   },
 ]

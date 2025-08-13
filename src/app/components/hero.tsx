@@ -10,8 +10,8 @@ export default function HeroSection() {
     <div className="w-[1180] h-[400px] mt-[40px] mx-auto border-[1px] mb-[50px] flex ">
         <div className="w-[250px] h-[360px]  mt-5  top-[182px] ml-2 left-[144px] ">
             <ul>
-                <Link href={""}><li className="w-[250px] hover:bg-blue-200  ml-4 h-[40px] top-[182px] left-[144px]">Automobiles</li></Link>
-                <Link href={""}><li className="w-[250px] h-[40px] hover:bg-blue-200 ml-4 top-[182px] left-[144px]">Cloths and Wear</li></Link>
+                <Link href={"http://localhost:3000/secPage"}><li className="w-[250px] hover:bg-blue-200  ml-4 h-[40px] top-[182px] left-[144px]">Automobiles</li></Link>
+                <Link href={"http://localhost:3000/forPage"}><li className="w-[250px] h-[40px] hover:bg-blue-200 ml-4 top-[182px] left-[144px]">Cloths and Wear</li></Link>
                 <Link href={""}><li className="w-[250px] h-[40px] hover:bg-blue-200  ml-4 top-[182px] left-[144px]"> Home interiors</li></Link>
                 <Link href={""}><li className="w-[250px] h-[40px] hover:bg-blue-200 ml-4 top-[182px] left-[144px]">Computer and tech</li></Link>
                 <Link href={""}><li className="w-[250px] h-[40px] hover:bg-blue-200 ml-4 top-[182px] left-[144px]">Tools, equipment</li></Link>

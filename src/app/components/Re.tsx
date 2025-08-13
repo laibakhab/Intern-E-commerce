@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export default function RecommendationsPage() {
   const recommendedItems = [
@@ -8,61 +9,61 @@ export default function RecommendationsPage() {
       id: 1,
       name: "T-shirts with multiple colors, for men",
       price: "$10.30",
-      image: "/images/rasm-1.png"
+      image: "/images/Bitmap-1.png"
     },
     {
       id: 2,
       name: "Jeans jacket for men, blue color",
       price: "$10.30",
-      image: "/images/image 94.png"
+      image: "/images/2 1.png"
     },
     {
       id: 3,
       name: "Formal winter coat, medium size",
       price: "$12.50",
-      image: "/images/image 93.png"
+      image: "/images/blazer.png"
     },
     {
       id: 4,
       name: "Shirt bag for travel for men",
       price: "$34.00",
-      image: "/images/pot small.png"
+      image: "/images/wallet.png"
     },
     {
       id: 5,
       name: "Leather sneaker",
       price: "$69.00",
-      image: "/images/mixer.png"
+      image: "/images/backpack.png"
     },
     {
       id: 6,
       name: "Denim camera bag, 100% zoom",
       price: "$8.99",
-      image: "/images/pot.png"
+      image: "/images/Bitmap.png"
     },
     {
       id: 7,
       name: "Headset for gaming with mic",
       price: "$8.99",
-      image: "/images/plant.png"
+      image: "/images/simple headphone.png"
     },
     {
       id: 8,
       name: "Smartwatch, silver color modern",
       price: "$10.30",
-      image: "/images/plant.png"
+      image: "/images/backpack.png"
     },
     {
       id: 9,
       name: "Blue wallet for men, leather metal foil",
       price: "$10.30",
-      image: "/images/plant.png"
+      image: "/images/pot.png"
     },
     {
       id: 10,
       name: "Jeans bag for travel for men",
       price: "$80.95",
-      image: "/images/plant.png"
+      image: "/images/kettle small.png"
     }
   ]
 
@@ -129,6 +130,7 @@ export default function RecommendationsPage() {
               </Card>
             ))}
           </div>
+          
         </section>
 
         {/* Our Extra Services Section */}
