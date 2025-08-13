@@ -8,8 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
 import { Badge } from "@/components/ui/badge"
-import { Label } from "@radix-ui/react-label"
-import Link from "next/link"
+
 
 const products = [
   { id: 1, name: "GoPro HERO6 4K Action Camera", price: 59.5, originalPrice: 79.5, rating: 4, image: "/images/iphone.png", category: "Camera" },

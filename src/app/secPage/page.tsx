@@ -5,11 +5,7 @@
 "use client"
 
 import {
-  ShoppingBag,
-  User,
-  MessageCircle,
   Heart,
-  ShoppingCart,
   Menu,
   ChevronDown,
   Grid3X3,
@@ -32,8 +28,7 @@ import mobile from "../../../public/images/mobile.png"
 import tablet from "../../../public/images/tablet.png"
 import labtop from "../../../public/images/laptop small.png"
 import headphones from "../../../public/images/simple headphone.png"
-import UprFooter from "../components/upperfooter"
-import Footer from "../components/footer"
+
 import Link from "next/link"
 
 export default function EcommerceWebsite() {

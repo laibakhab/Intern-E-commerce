@@ -6,8 +6,6 @@ import { useState } from "react";
 import { ChevronDown, Menu as MenuIcon, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-import Menu from "@/app/assests/images/menu.png";
 import ShipFlage from "@/app/assests/images/WhatsApp Image 2025-07-29 at 13.02.01_ea4d662d.jpg";
 
 export default function Navbar() {
