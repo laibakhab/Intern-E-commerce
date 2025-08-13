@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Heart, Grid3X3, List, Star, Filter } from "lucide-react"
+import { Heart,  Filter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -38,7 +38,7 @@ const features = [
 ]
 
 export default function ProductListing() {
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+  const [viewMode] = useState<"grid" | "list">("grid")
   const [priceRange, setPriceRange] = useState([0, 1000])
   const [selectedFilters, setSelectedFilters] = useState(["Samsung", "Apple", "Poco", "Metallic", "5 star"])
   const [showFilters, setShowFilters] = useState(false)

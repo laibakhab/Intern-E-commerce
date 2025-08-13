@@ -84,7 +84,8 @@ export default function ShoppingCartPage() {
   const tax = 14.0
   const total = subtotal - discount + tax
 
-  const moveToCart = (savedItem: any) => {
+  
+  const moveToCart = (savedItem: unknown) => {
     console.log("Moving to cart:", savedItem)
   }
 

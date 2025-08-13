@@ -1,9 +1,5 @@
-import Image from "next/image";
-import Footer from "./components/footer";
+"use client"
 import HeroSection from "./components/hero";
-import Navbar from "./components/nav";
-import Header from "./components/header";
-import UprFooter from "./components/upperfooter";
 import SupplierRequestForm from "./components/supplier";
 import DealsOffers from "./components/dealsOffer";
 import ElectronicsShowcase from "./components/ElectronicsShowcase";
