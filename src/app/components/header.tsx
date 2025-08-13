@@ -26,11 +26,11 @@ export default function Header() {
               <Input    
                 type="text"
                 placeholder="Search"
-                className="h-10 w-[400px] pr-4 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                className=" h-9 w-[350px] pr-4 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0"
               />
             </div>
             <Select defaultValue="all" >
-              <SelectTrigger className="w-40 h-10 rounded-none border-l-0  border-r-0 focus:ring-0 focus:ring-offset-0">
+              <SelectTrigger className="w-[150px] h-10 rounded-none border-l-0  border-r-0 focus:ring-0 focus:ring-offset-0">
                 <SelectValue placeholder="All category" />
               </SelectTrigger>
               <SelectContent  >
@@ -41,7 +41,7 @@ export default function Header() {
                 <SelectItem value="sports">Sports</SelectItem>
               </SelectContent>
             </Select>
-            <Button className="h-10 px-6 rounded-l-none bg-blue-500 hover:bg-blue-600">Search</Button>
+            <Button className="h-9 px-6 rounded-l-none bg-blue-500 hover:bg-blue-600">Search</Button>
           </div>
         </div>
 

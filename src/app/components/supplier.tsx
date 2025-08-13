@@ -1,6 +1,6 @@
 // import React from 'react';
 import Image from 'next/image';
-import Image3 from "@/app/assests/images/Banner-board-800x420 2.png"
+import Image3 from "../../../public/images/Rectangle 299.png"
 import { ChevronDown } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
