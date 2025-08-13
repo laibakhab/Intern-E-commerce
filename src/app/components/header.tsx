@@ -1,13 +1,4 @@
-// import Image from "next/image";
 
-// export default function Hearder() {
-//   return (
-//   <div className="w-[1440px] h-[86px] bg-[#FFFFFF]">
-//     <p>Laiba</p>
-    
-//   </div>  
-//   );
-// }
 
 
 import { ShoppingBag, User, MessageCircle, Heart, ShoppingCart } from "lucide-react"
@@ -72,7 +63,7 @@ export default function Header() {
           </div>
 
           <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-            <Link href="/fifPage">
+            <Link href="/lastPage">
             <ShoppingCart className="h-5 w-5 text-gray-600" />
             </Link>
             <span className="text-xs text-gray-600">My cart</span>

@@ -1,241 +1,3 @@
-// "use client"
-// import Header from "../components/header";
-// import Navbar from "../components/nav";
-// import { useState } from "react"
-// import Image from "next/image"
-// import { Heart, Star, CheckCircle, Shield, Globe } from "lucide-react"
-// import { Button } from "@/components/ui/button"
-// import { Card, CardContent } from "@/components/ui/card"
-
-// const productImages = [
-//   "/placeholder.svg?height=400&width=400&text=Gray+Polo+Main",
-//   "/placeholder.svg?height=100&width=100&text=Gray+Front",
-//   "/placeholder.svg?height=100&width=100&text=White+Polo",
-//   "/placeholder.svg?height=100&width=100&text=Blue+Polo",
-//   "/placeholder.svg?height=100&width=100&text=Red+Polo",
-//   "/placeholder.svg?height=100&width=100&text=Black+Polo",
-//   "/placeholder.svg?height=100&width=100&text=Navy+Polo",
-// ]
-
-// const pricingTiers = [
-//   { quantity: "50-100 pcs", price: "$98.00", color: "text-red-500" },
-//   { quantity: "100-700 pcs", price: "$90.00", color: "text-orange-500" },
-//   { quantity: "700+ pcs", price: "$78.00", color: "text-green-500" },
-// ]
-
-// const productSpecs = [
-//   { label: "Price:", value: "Negotiable", color: "text-gray-600" },
-//   { label: "Type:", value: "Classic shoes", color: "text-gray-600" },
-//   { label: "Material:", value: "Plastic material", color: "text-blue-600" },
-//   { label: "Design:", value: "Modern nice", color: "text-blue-600" },
-//   { label: "Customization:", value: "Customized logo and design custom packages", color: "text-gray-600" },
-//   { label: "Protection:", value: "Refund Policy", color: "text-blue-600" },
-//   { label: "Warranty:", value: "2 years full warranty", color: "text-gray-600" },
-// ]
-
-// export default function B2BProductPage() {
-//   const [selectedImage, setSelectedImage] = useState(0)
-//   const [isSaved, setIsSaved] = useState(false)
-
-//   return (
-//     <div>
-
-//     <Header/>
-//         <Navbar/>
-
-//       {/* Breadcrumb */}
-//       <div className="w-full  mx-auto px-4 py-3">
-//         <div className="flex items-center gap-2 text-sm  text-gray-500">
-//           <span className="cursor-pointer hover:text-blue-500">Home</span>
-//           <span>{">"}</span>
-//           <span className="cursor-pointer hover:text-blue-500">Clothings</span>
-//           <span>{">"}</span>
-//           <span className="cursor-pointer hover:text-blue-500">Men's wear</span>
-//           <span>{">"}</span>
-//           <span>Summer clothing</span>
-//         </div>
-//       </div>
-
-
-
-//     <div className="min-h-screen bg-gray-50 p-4">
-//       <div className="max-w-7xl mx-auto">
-//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-//           {/* Product Images */}
-//           <div className="lg:col-span-4">
-//             <Card>
-//               <CardContent className="p-4">
-//                 {/* Main Image */}
-//                 <div className="mb-4">
-//                   <Image
-//                     src={productImages[selectedImage] || "/placeholder.svg"}
-//                     alt="Product main image"
-//                     width={400}
-//                     height={400}
-//                     className="w-full h-80 object-cover rounded-lg border"
-//                   />
-//                 </div>
-
-//                 {/* Thumbnail Images */}
-//                 <div className="flex gap-2 overflow-x-auto">
-//                   {productImages.map((image, index) => (
-//                     <button
-//                       key={index}
-//                       onClick={() => setSelectedImage(index)}
-//                       className={`flex-shrink-0 w-16 h-16 rounded border-2 overflow-hidden ${
-//                         selectedImage === index ? "border-blue-500" : "border-gray-200"
-//                       }`}
-//                     >
-//                       <Image
-//                         src={image || "/placeholder.svg"}
-//                         alt={`Product thumbnail ${index + 1}`}
-//                         width={64}
-//                         height={64}
-//                         className="w-full h-full object-cover"
-//                       />
-//                     </button>
-//                   ))}
-//                 </div>
-//               </CardContent>
-//             </Card>
-//           </div>
-
-//           {/* Product Details */}
-//           <div className="lg:col-span-5">
-//             <Card>
-//               <CardContent className="p-6">
-//                 {/* Stock Status */}
-//                 <div className="flex items-center gap-2 mb-3">
-//                   <CheckCircle className="w-4 h-4 text-green-500" />
-//                   <span className="text-green-600 text-sm font-medium">In stock</span>
-//                 </div>
-
-//                 {/* Product Title */}
-//                 <h1 className="text-2xl font-bold text-gray-900 mb-3">
-//                   Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle
-//                 </h1>
-
-//                 {/* Rating and Reviews */}
-//                 <div className="flex items-center gap-4 mb-4">
-//                   <div className="flex items-center gap-1">
-//                     {[...Array(5)].map((_, i) => (
-//                       <Star
-//                         key={i}
-//                         className={`w-4 h-4 ${
-//                           i < 4
-//                             ? "fill-yellow-400 text-yellow-400"
-//                             : i === 4
-//                               ? "fill-yellow-400/50 text-yellow-400"
-//                               : "text-gray-300"
-//                         }`}
-//                       />
-//                     ))}
-//                     <span className="text-sm text-gray-600 ml-1">4.5</span>
-//                   </div>
-//                   <span className="text-sm text-gray-500">32 reviews</span>
-//                   <span className="text-sm text-gray-500">154 sold</span>
-//                 </div>
-
-//                 {/* Pricing Tiers */}
-//                 <div className="mb-6">
-//                   <div className="grid grid-cols-3 gap-4">
-//                     {pricingTiers.map((tier, index) => (
-//                       <div key={index} className="text-center">
-//                         <div className={`text-lg font-bold ${tier.color}`}>{tier.price}</div>
-//                         <div className="text-xs text-gray-500">{tier.quantity}</div>
-//                       </div>
-//                     ))}
-//                   </div>
-//                 </div>
-
-//                 {/* Product Specifications */}
-//                 <div className="space-y-3">
-//                   {productSpecs.map((spec, index) => (
-//                     <div key={index} className="flex">
-//                       <span className="text-gray-500 text-sm w-32 flex-shrink-0">{spec.label}</span>
-//                       <span className={`text-sm ${spec.color}`}>{spec.value}</span>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </CardContent>
-//             </Card>
-//           </div>
-
-//           {/* Supplier Information */}
-//           <div className="lg:col-span-3">
-//             <Card>
-//               <CardContent className="p-4">
-//                 {/* Supplier Header */}
-//                 <div className="flex items-center gap-3 mb-4">
-//                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-//                     <span className="text-blue-600 font-bold text-lg">R</span>
-//                   </div>
-//                   <div>
-//                     <div className="text-sm text-gray-500">Supplier</div>
-//                     <div className="font-semibold text-gray-900">Guangxi Trading LLC</div>
-//                   </div>
-//                 </div>
-
-//                 {/* Supplier Details */}
-//                 <div className="space-y-3 mb-6">
-//                   <div className="flex items-center gap-2 text-sm">
-//                     <div className="w-4 h-4 bg-orange-500 rounded-sm flex items-center justify-center">
-//                       <span className="text-white text-xs">🇩🇪</span>
-//                     </div>
-//                     <span className="text-gray-600">Germany, Berlin</span>
-//                   </div>
-
-//                   <div className="flex items-center gap-2 text-sm">
-//                     <Shield className="w-4 h-4 text-green-500" />
-//                     <span className="text-gray-600">Verified Seller</span>
-//                   </div>
-
-//                   <div className="flex items-center gap-2 text-sm">
-//                     <Globe className="w-4 h-4 text-blue-500" />
-//                     <span className="text-gray-600">Worldwide shipping</span>
-//                   </div>
-//                 </div>
-
-//                 {/* Action Buttons */}
-//                 <div className="space-y-3">
-//                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Send inquiry</Button>
-
-//                   <Button variant="outline" className="w-full bg-transparent">
-//                     Seller's profile
-//                   </Button>
-
-//                   <Button
-//                     variant="ghost"
-//                     className="w-full flex items-center justify-center gap-2"
-//                     onClick={() => setIsSaved(!isSaved)}
-//                   >
-//                     <Heart className={`w-4 h-4 ${isSaved ? "fill-red-500 text-red-500" : "text-gray-500"}`} />
-//                     Save for later
-//                   </Button>
-//                 </div>
-//               </CardContent>
-//             </Card>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-
-
-
-
-
-
-
-
-//       </div>
-
-
-//       )
-//     }
-
-
-
 "use client"
 
 import Image from "next/image"
@@ -244,21 +6,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import image from "next/image"
-import Header from "../components/header"
-import Navbar from "../components/nav"
 import ShoppingCartPage from "../components/blue"
-import UprFooter from "../components/upperfooter"
-import Footer from "../components/footer"
+
 
 export default function ProductDetailPage() {
   const productImages = [
-    "/images/wallet.png",
-    "/images/smartwatch small.png",
-    "/images/simple headphone.png",
-    "/images/Bitmap.png",
-    "/images/kettle small.png",
-    "/images/rasm.png",
+    "/images/image 34.png",
+    "/images/image 35.png",
+    "/images/image 40.png",
+    "/images/image 36.png",
+    "/images/image 37.png",
+    "/images/image 34.png",
   ]
 
   const relatedProducts = [
@@ -284,8 +42,6 @@ export default function ProductDetailPage() {
 
   return (
     <div className="w-full">
-      <Header/>
-      <Navbar/>
       {/* Breadcrumb */}
       <div className="bg-white w-full border-b">
         <div className="max-w-7xl mx-auto  px-4 py-3">
@@ -311,12 +67,13 @@ export default function ProductDetailPage() {
                 <div className="space-y-4">
                   <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
                     <Image
-                      src="/images/bitmap-1.png"
-                      alt="Gray Polo Shirt"
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover"
+                        src="/images/image 34.png"
+                        alt="Gray Polo Shirt"
+                        width={400}
+                        height={400}
+                        className="w-full h-full object-contain rounded-lg bg-white"
                     />
+
                   </div>
                   <div className="grid grid-cols-6 gap-2">
                     {productImages.map((image, index) => (
@@ -639,8 +396,6 @@ export default function ProductDetailPage() {
         
       </div>
       <ShoppingCartPage/>
-        <UprFooter/>
-        <Footer/>
     </div>
   )
 }

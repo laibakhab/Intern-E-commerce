@@ -343,7 +343,7 @@ export default function ProductListing() {
                       alt={product.name}
                       width={200}
                       height={100} 
-                      className=" h-50 object-cover rounded-lg"
+                      className=" h-48 object-contain rounded-lg"
                     />
                     <Button variant="ghost" size="icon" className="absolute top-2 right-2 bg-white/80 hover:bg-white">
                       <Heart className="w-4 h-4" />

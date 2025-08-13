@@ -7,10 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Header from "../components/header"
-import Navbar from "../components/nav"
-import Footer from "../components/footer"
-import UprFooter from "../components/upperfooter"
+import ShoppingCartPages from "../components/blue"
 
 const cartItems = [
   {
@@ -45,28 +42,28 @@ const savedItems = [
     name: "GoPro HERO6 4K Action Camera",
     details: "Black",
     price: 99.5,
-    image: "/images/Bitmap-1",
+    image: "/images/Bitmap-1.png",
   },
   {
     id: 2,
     name: "GoPro HERO6 4K Action Camera",
     details: "Black",
     price: 99.5,
-    image: "/images/back",
+    image: "/images/image 94.png",
   },
   {
     id: 3,
     name: "GoPro HERO6 4K Action Camera",
     details: "Black",
     price: 99.5,
-    image: "/placeholder.svg?height=120&width=120&text=Watch",
+    image: "/images/backpack.png",
   },
   {
     id: 4,
     name: "GoPro HERO6 4K Action Camera",
     details: "Black",
     price: 99.5,
-    image: "/placeholder.svg?height=120&width=120&text=Laptop",
+    image: "/images/Bitmap-1.png",
   },
 ]
 
@@ -93,14 +90,12 @@ export default function ShoppingCartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-        <Header/>
-        <Navbar/>
+    <div className="min-h-screen ">
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg p-6">
+          <div className="lg:col-span-2  border-1 rounded-lg">
+            <div className="bg-white  rounded-lg p-6">
               <h1 className="text-2xl font-bold mb-6">My cart ({items.length})</h1>
 
               <div className="space-y-6">
@@ -260,12 +255,13 @@ export default function ShoppingCartPage() {
               {savedItems.map((item) => (
                 <div key={item.id} className="text-center">
                   <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.name}
-                    width={120}
-                    height={120}
-                    className="w-full h-32 object-cover rounded-lg mb-3"
-                  />
+  src={item.image || "/placeholder.svg"}
+  alt={item.name}
+  width={120}
+  height={120}
+  className="w-full h-32 object-contain rounded-lg mb-3 bg-white"
+/>
+
                   <div className="font-bold text-lg mb-1">${item.price}</div>
                   <h3 className="font-medium text-sm mb-1 line-clamp-2">{item.name}</h3>
                   <p className="text-xs text-gray-600 mb-3">{item.details}</p>
@@ -285,9 +281,8 @@ export default function ShoppingCartPage() {
         </div>
       </div>
 
-      <ShoppingCartPage/>
-      <Footer/>
-      <UprFooter/>
+      <ShoppingCartPages/>
+
     </div>
   )
 }

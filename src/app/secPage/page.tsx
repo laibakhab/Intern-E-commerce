@@ -504,8 +504,7 @@ export default function EcommerceWebsite() {
       </div>
 
 
-      <UprFooter/>
-      <Footer/>
+  
 
 
       

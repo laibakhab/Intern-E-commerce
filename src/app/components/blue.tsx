@@ -2,9 +2,9 @@
 import { Button } from "@/components/ui/button"
 
 
-export default function ShoppingCartPage() {
+export default function ShoppingCartPages() {
   return (
-    <div className="mt-6 w-[1180px] ml-[80px] mb-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-6 text-white">
+    <div className="mt-6 w-[1180px] mx-auto  mb-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-6 text-white">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xl font-bold mb-1">Super discount on more than 100 USD</h3>

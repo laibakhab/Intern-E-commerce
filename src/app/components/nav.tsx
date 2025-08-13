@@ -19,7 +19,7 @@ export default function Navbar() {
                 className='w-[25px] h-[20px]  mt-[1px] ' 
             />
             
-            <Link href ="/contact" ><li className="hover:text-gray-900  cursor-pointer w-25 ">All Category</li></Link>  
+            <Link href ="/secPage" ><li className="hover:text-gray-900  cursor-pointer w-25 ">All Category</li></Link>  
             <Link href ="/" ><li className="hover:text-gray-900 cursor-pointer w-20 ">Hot Offers</li></Link>
             <Link href ="/shop" ><li className="hover:text-gray-900 cursor-pointer w-20 ">Gift Boxes</li></Link>
             <Link href ="/blog" ><li className="hover:text-gray-900 cursor-pointer w-15 ">Projects</li></Link>
