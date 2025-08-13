@@ -20,7 +20,7 @@ const cartItems = [
   },
   {
     id: 2,
-    name: "College bags for girls Pu leather with shoulder bag Fashion Backpack for women ",
+    name: "College bags for girls Pu leather with shoulder bag Fashion Backpack for women",
     details: "Size: medium, Color: blue, Material: Plastic, Seller: Best Factory LLC",
     price: 39.5,
     quantity: 3,
@@ -85,50 +85,65 @@ export default function ShoppingCartPage() {
   const total = subtotal - discount + tax
 
   const moveToCart = (savedItem: any) => {
-    // Logic to move saved item to cart
     console.log("Moving to cart:", savedItem)
   }
 
   return (
-    <div className="min-h-screen ">
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
           {/* Cart Items */}
-          <div className="lg:col-span-2  border-1 rounded-lg">
-            <div className="bg-white  rounded-lg p-6">
-              <h1 className="text-2xl font-bold mb-6">My cart ({items.length})</h1>
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
+              <h1 className="text-xl sm:text-2xl font-bold mb-6">My cart ({items.length})</h1>
 
               <div className="space-y-6">
                 {items.map((item) => (
-                  <div key={item.id} className="flex gap-4 pb-6 border-b border-gray-200 last:border-b-0">
+                  <div 
+                    key={item.id} 
+                    className="flex flex-col sm:flex-row gap-4 pb-6 border-b border-gray-200 last:border-b-0"
+                  >
+                    {/* Product Image */}
                     <Image
                       src={item.image || "/placeholder.svg"}
                       alt={item.name}
                       width={80}
                       height={80}
-                      className="w-20 h-20 object-cover rounded-lg"
+                      className="w-24 h-24 object-cover rounded-lg mx-auto sm:mx-0"
                     />
 
-                    <div className="flex-1">
+                    {/* Product Info */}
+                    <div className="flex-1 text-center sm:text-left">
                       <h3 className="font-medium text-gray-900 mb-1">{item.name}</h3>
                       <p className="text-sm text-gray-600 mb-3">{item.details}</p>
 
-                      <div className="flex items-center gap-4">
-                        <button onClick={() => removeItem(item.id)} className="text-red-600 border-2 p-1 rounded-sm w-20 text-sm hover:underline">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <button 
+                          onClick={() => removeItem(item.id)} 
+                          className="text-red-600 border p-1 rounded text-sm hover:bg-red-50"
+                        >
                           Remove
                         </button>
-                        <button className="text-blue-600 text-sm border-2 p-1 rounded-sm w-30 hover:underline">Save for later</button>
+                        <button 
+                          className="text-blue-600 text-sm border p-1 rounded hover:bg-blue-50"
+                        >
+                          Save for later
+                        </button>
                       </div>
                     </div>
 
-                    <div className="text-right">
+                    {/* Price + Quantity */}
+                    <div className="text-center sm:text-right">
                       <div className="font-bold text-lg mb-2">${item.price}</div>
                       <Select
                         value={item.quantity.toString()}
                         onValueChange={(value) => updateQuantity(item.id, Number.parseInt(value))}
                       >
-                        <SelectTrigger className="w-20">
-                          <SelectValue />
+                        <SelectTrigger className="w-24 mx-auto sm:mx-0">
+                          <SelectValue placeholder="Qty" />
                         </SelectTrigger>
                         <SelectContent>
                           {[...Array(10)].map((_, i) => (
@@ -143,16 +158,17 @@ export default function ShoppingCartPage() {
                 ))}
               </div>
 
-              <div className="flex items-center justify-between mt-6 pt-6 border-t">
-                <Button variant="outline" className="flex items-center gap-2 bg-[#0067FF]">
+              {/* Actions */}
+              <div className="flex flex-col sm:flex-row items-center justify-between mt-6 pt-6 border-t gap-3">
+                <Button variant="outline" className="flex items-center gap-2 bg-[#0067FF] text-white w-full sm:w-auto">
                   <ArrowLeft className="w-4 h-4" />
                   Back to shop
                 </Button>
-                <button className="text-blue-600 border-2 p-1 rounded-sm w-30 hover:underline">Remove all</button>
+                <button className="text-blue-600 border p-1 rounded w-full sm:w-auto hover:bg-blue-50">Remove all</button>
               </div>
 
               {/* Trust Badges */}
-              <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t">
                 <div className="flex items-center gap-3">
                   <Lock className="w-5 h-5 text-gray-400" />
                   <div>
@@ -179,13 +195,14 @@ export default function ShoppingCartPage() {
           </div>
 
           {/* Order Summary */}
-          <div className="lg:col-span-1">
+          <div>
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
+                
                 {/* Coupon Section */}
                 <div className="mb-6">
                   <p className="text-sm text-gray-600 mb-2">Have a coupon?</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <Input
                       placeholder="Add coupon"
                       value={couponCode}
@@ -198,7 +215,7 @@ export default function ShoppingCartPage() {
                   </div>
                 </div>
 
-                {/* Order Summary */}
+                {/* Summary */}
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Subtotal:</span>
@@ -224,22 +241,12 @@ export default function ShoppingCartPage() {
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white mb-4">Checkout</Button>
 
                 {/* Payment Methods */}
-                <div className="flex justify-center gap-2">
-                  <div className="w-8 h-5 bg-red-500 rounded text-white text-xs flex items-center justify-center">
-                    MC
-                  </div>
-                  <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center">
-                    V
-                  </div>
-                  <div className="w-8 h-5 bg-blue-500 rounded text-white text-xs flex items-center justify-center">
-                    PP
-                  </div>
-                  <div className="w-8 h-5 bg-gray-600 rounded text-white text-xs flex items-center justify-center">
-                    AE
-                  </div>
-                  <div className="w-8 h-5 bg-green-600 rounded text-white text-xs flex items-center justify-center">
-                    GP
-                  </div>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {["MC", "V", "PP", "AE", "GP"].map((method, idx) => (
+                    <div key={idx} className="w-8 h-5 bg-gray-200 rounded text-xs flex items-center justify-center">
+                      {method}
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -248,20 +255,19 @@ export default function ShoppingCartPage() {
 
         {/* Saved for Later */}
         <div className="mt-12">
-          <div className="bg-white rounded-lg p-6">
-            <h2 className="text-xl font-bold mb-6">Saved for later</h2>
+          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
+            <h2 className="text-lg sm:text-xl font-bold mb-6">Saved for later</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {savedItems.map((item) => (
                 <div key={item.id} className="text-center">
                   <Image
-  src={item.image || "/placeholder.svg"}
-  alt={item.name}
-  width={120}
-  height={120}
-  className="w-full h-32 object-contain rounded-lg mb-3 bg-white"
-/>
-
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.name}
+                    width={120}
+                    height={120}
+                    className="w-full h-32 object-contain rounded-lg mb-3 bg-white"
+                  />
                   <div className="font-bold text-lg mb-1">${item.price}</div>
                   <h3 className="font-medium text-sm mb-1 line-clamp-2">{item.name}</h3>
                   <p className="text-xs text-gray-600 mb-3">{item.details}</p>
@@ -281,8 +287,8 @@ export default function ShoppingCartPage() {
         </div>
       </div>
 
-      <ShoppingCartPages/>
-
+      {/* Discount Banner */}
+      <ShoppingCartPages />
     </div>
   )
 }

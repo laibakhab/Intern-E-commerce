@@ -1,6 +1,4 @@
 
-
-
 import { ShoppingBag, User, MessageCircle, Heart, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -9,8 +7,9 @@ import Link from "next/link"
 
 export default function Header() {
   return (
-    <header className="max-w-7xl mx-auto flex items-center   border-b border-gray-200 px-4 py-3">
-      <div className="max-w-7xl mx-auto  flex items-center gap-30">
+    <header className="w-full border-b border-gray-200 bg-white">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        
         {/* Brand Logo */}
         <div className="flex items-center gap-2 flex-shrink-0">
           <div className="bg-blue-500 p-2 rounded-lg">
@@ -20,21 +19,19 @@ export default function Header() {
         </div>
 
         {/* Search Section */}
-        <div className="flex-1 max-w-2xl">
-          <div className="flex">
-            <div className="relative flex-1 ">
-              <Input    
-                type="text"
-                placeholder="Search"
-                className=" h-9 w-[350px] pr-4 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0"
-              />
-            </div>
-            <Select defaultValue="all" >
-              <SelectTrigger className="w-[150px] h-10 rounded-none border-l-0  border-r-0 focus:ring-0 focus:ring-offset-0">
+        <div className="flex flex-col sm:flex-row sm:flex-1 sm:max-w-2xl gap-2">
+          <div className="flex flex-1">
+            <Input
+              type="text"
+              placeholder="Search"
+              className="h-9 w-full pr-4 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+            <Select defaultValue="all">
+              <SelectTrigger className="w-[140px] h-9 rounded-none border-l-0 border-r-0 focus:ring-0 focus:ring-offset-0">
                 <SelectValue placeholder="All category" />
               </SelectTrigger>
-              <SelectContent  >
-                <SelectItem value="all" >All category</SelectItem>
+              <SelectContent>
+                <SelectItem value="all">All category</SelectItem>
                 <SelectItem value="electronics">Electronics</SelectItem>
                 <SelectItem value="clothing">Clothing</SelectItem>
                 <SelectItem value="home">Home & Garden</SelectItem>
@@ -46,7 +43,7 @@ export default function Header() {
         </div>
 
         {/* User Actions */}
-        <div className="flex items-center gap-6">
+        <div className="grid grid-cols-4 gap-4 sm:flex sm:items-center sm:gap-6">
           <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
             <User className="h-5 w-5 text-gray-600" />
             <span className="text-xs text-gray-600">Profile</span>
@@ -64,7 +61,7 @@ export default function Header() {
 
           <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
             <Link href="/lastPage">
-            <ShoppingCart className="h-5 w-5 text-gray-600" />
+              <ShoppingCart className="h-5 w-5 text-gray-600" />
             </Link>
             <span className="text-xs text-gray-600">My cart</span>
           </div>

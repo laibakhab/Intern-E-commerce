@@ -12,70 +12,32 @@ interface ProductCategory {
 }
 
 const productCategories: ProductCategory[] = [
-  {
-    id: 1,
-    name: "Soft chairs",
-    price: "From USD 19",
-    image: "/images/rasm-1.png",
-  },
-  {
-    id: 2,
-    name: "Sofa & chair",
-    price: "From USD 19",
-    image: "/images/image 94.png",
-  },
-  {
-    id: 3,
-    name: "Kitchen dishes",
-    price: "From USD 19",
-    image: "/images/image 93.png",
-  },
-  {
-    id: 4,
-    name: "Smart watches",
-    price: "From USD 19",
-    image: "/images/pot small.png",
-  },
-  {
-    id: 5,
-    name: "Kitchen mixer",
-    price: "From USD 100",
-    image: "/images/mixer.png",
-  },
-  {
-    id: 6,
-    name: "Blenders",
-    price: "From USD 39",
-    image: "/images/blender.png",
-  },
-  {
-    id: 7,
-    name: "Home appliance",
-    price: "From USD 19",
-    image: "/images/rasm.png",
-  },
-  {
-    id: 8,
-    name: "Coffee maker",
-    price: "From USD 10",
-    image: "/images/plant.png",
-  },
+  { id: 1, name: "Soft chairs", price: "From USD 19", image: "/images/rasm-1.png" },
+  { id: 2, name: "Sofa & chair", price: "From USD 19", image: "/images/image 94.png" },
+  { id: 3, name: "Kitchen dishes", price: "From USD 19", image: "/images/image 93.png" },
+  { id: 4, name: "Smart watches", price: "From USD 19", image: "/images/pot small.png" },
+  { id: 5, name: "Kitchen mixer", price: "From USD 100", image: "/images/mixer.png" },
+  { id: 6, name: "Blenders", price: "From USD 39", image: "/images/blender.png" },
+  { id: 7, name: "Home appliance", price: "From USD 19", image: "/images/rasm.png" },
+  { id: 8, name: "Coffee maker", price: "From USD 10", image: "/images/plant.png" },
 ]
 
 export default function HomeOutdoorShowcase() {
   return (
-    <div className="bg-white flex mx-auto rounded-lg mt-10 w-[1180px] border  overflow-hidden h-[257px]">
+    <div className="bg-white flex flex-col md:flex-row mx-auto rounded-lg mt-10 w-full max-w-[1180px] border overflow-hidden">
       
       {/* Left Banner Section */}
-      <div className="relative w-[280px] h-[257px]">
+      <div className="relative w-full md:w-[280px] h-[200px] md:h-[257px] flex-shrink-0">
         <Image 
           src={BannerImage} 
-          alt='Banner' 
+          alt="Banner" 
           className="w-full h-full object-cover" 
         />
         <div className="absolute top-0 left-0 p-5 space-y-4">
-          <h4 className="text-[20px] leading-[26px] tracking-[-0.2px] font-bold text-gray-900">Consumer <br /> electronics and <br /> gadgets</h4>
-          <button className="inline-flex items-center gap-2 bg-white hover:bg-blue-100 text-black px-4 py-2 rounded-lg font-medium transition-colors group">
+          <h4 className="text-lg md:text-[20px] leading-tight font-bold text-gray-900">
+            Consumer <br /> electronics and <br /> gadgets
+          </h4>
+          <button className="inline-flex items-center gap-2 bg-white hover:bg-blue-100 text-black px-3 py-2 rounded-lg font-medium transition-colors group text-sm md:text-base">
             Source now
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -84,7 +46,7 @@ export default function HomeOutdoorShowcase() {
 
       {/* Right Product Grid Section */}
       <div className="flex-1 bg-white p-3">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 h-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
           {productCategories.map((category) => (
             <div
               key={category.id}
@@ -97,7 +59,7 @@ export default function HomeOutdoorShowcase() {
               </div>
 
               {/* Right: Product Image */}
-              <div className="relative w-16 h-16">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16">
                 <Image
                   src={category.image || "/placeholder.svg"}
                   alt={category.name}
@@ -112,5 +74,3 @@ export default function HomeOutdoorShowcase() {
     </div>
   )
 }
-
-
