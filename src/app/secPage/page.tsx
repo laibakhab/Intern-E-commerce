@@ -44,7 +44,7 @@ export default function EcommerceWebsite() {
             <span className="mx-1">{">"}</span>
             <span>Clothings</span>
             <span className="mx-1">{">"}</span>
-            <span>Men's wear</span>
+            <span>Men&apos;s wear</span>
             <span className="mx-1">{">"}</span>
             <span className="text-gray-900">Summer Clothing</span>
           </nav>

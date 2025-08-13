@@ -65,7 +65,8 @@ export default function HeroSection() {
             />
             <div className="text-sm">
               <p>Hi, user</p>
-              <p>Let's get started</p>
+             <p>Let&apos;s get started</p>
+
             </div>
           </div>
           <div className="mt-4 flex flex-col gap-2 w-full">

@@ -49,7 +49,7 @@ export default function ProductDetailPage() {
             <ChevronRight className="w-4 h-4" />
             <span>Clothings</span>
             <ChevronRight className="w-4 h-4" />
-            <span>Men's wear</span>
+           <span>Men&apos;s wear</span>
             <ChevronRight className="w-4 h-4" />
             <span>Summer clothing</span>
           </nav>
@@ -214,7 +214,7 @@ export default function ProductDetailPage() {
                 <div className="mt-4 space-y-2">
                   <Button className="w-full bg-blue-600">Send Inquiry</Button>
                   <Button variant="outline" className="w-full">
-                    Seller's profile
+                    Seller&apos;s profile
                   </Button>
                 </div>
               </CardContent>
